@@ -23,7 +23,6 @@ First, we need to read the data into R. For this assignment, I ask you to use da
 
 
 ```{r}
-install.packages("tidyverse")
 library(tidyverse)
 # This attaches the tidyverse package. If you get an error here you need to install the package first. 
 youth <- read_tsv("/Users/TheaSmith/Desktop/Data Analysis III/UKDA-6614-tab/tab/ukhls_w9/i_youth.tab")
