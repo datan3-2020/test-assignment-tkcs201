@@ -1,7 +1,7 @@
 ---
 title: "Test statistical assignment"
-author: "Alexey Bessudnov"
-date: "22 January 2020"
+author: "Thea Smith"
+date: "27 January 2020"
 output: github_document
 ---
 
