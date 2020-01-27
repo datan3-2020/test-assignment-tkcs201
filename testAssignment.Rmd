@@ -99,6 +99,8 @@ barplot(SMgender,
         col = "blue", 
         xlab = "Gender", 
         ylab = "Proportion with social media") 
+
+barplot(tapply(youth$socialmedia, list(socialmedia$)))
 ```
 
 ## Conclusion
