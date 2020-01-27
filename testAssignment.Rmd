@@ -87,21 +87,16 @@ Just over 81 percent of the youth have social media. There is an increase in soc
 Create a statistical graph (only one, but it can be faceted) illustrating your results (i.e. showing how the probability of having an account on social media changes with age and gender). Which type of statistical graph would be most appropriate for this?
 
 ```{r}
-SMage <- tapply(youth$socialmedia, youth$i_age_dv, mean, na.rm = TRUE)
-SMgender <- tapply(youth$socialmedia, youth$gender, mean, na.rm = TRUE)
+YoungMedia <- tapply(youth$socialmedia, list(youth$gender, youth$i_age_dv), mean, na.rm = TRUE)
 
-barplot(SMage, 
-        col = "red", 
-        xlab = "Age", 
-        ylab = "Proportion with social media")
-
-barplot(SMgender, 
-        col = "blue", 
-        xlab = "Gender", 
-        ylab = "Proportion with social media") 
-
-barplot(tapply(youth$socialmedia, list(socialmedia$)))
+barplot(YoungMedia, 
+        main = "Bar plot showing the proportion of young people using social media", 
+        xlab = "Age",
+        ylab = "Proportion of young people using social media", 
+        legend = youth$gender[1:2], 
+        beside = TRUE)
 ```
+
 
 ## Conclusion
 
